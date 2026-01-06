@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrasoMat AI - Optimalizace tras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md border-b-2 border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img 
+                        src="https://i.imgur.com/gSpYMVN.png" 
+                        alt="TrasoMat"
+                        class="h-12"
+                    />
+                    <span class="ml-3 px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full">AI</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="text-sm text-gray-600">
+                        <span class="font-semibold">30% úspora</span> průměrně
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 rounded-full mb-4">
+                <svg class="w-4 h-4 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <span class="text-sm font-semibold text-purple-800">Poháněno umělou inteligencí</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+                Chytřejší Optimalizace Tras
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">
+                AI predikuje dopravu, počasí a respektuje časová okna zákazníků
+            </p>
+            <button onclick="scrollToDemo()" class="bg-gradient-to-r from-blue-600 via-purple-600 to-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+                Vyzkoušet Demo →
+            </button>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Dopravní Predikce</h3>
+                <p class="text-gray-600">AI předvídá kongesce a navrhuje optimální čas vyjezdu</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Časová Okna</h3>
+                <p class="text-gray-600">Respektuje požadavky zákazníků a prioritizuje urgentní dodávky</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Počasí & Podmínky</h3>
+                <p class="text-gray-600">Zohledňuje meteorologické předpovědi pro přesnější plánování</p>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="bg-gradient-to-r from-blue-600 via-purple-600 to-green-500 rounded-2xl p-12 text-white mb-16" id="demo">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold mb-4">Ušetřete reálné peníze</h2>
+                <p class="text-lg opacity-90">Průměrné úspory našich klientů</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">30%</div>
+                    <div class="text-lg opacity-90">Úspora kilometrů</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">3,500 Kč</div>
+                    <div class="text-lg opacity-90">Měsíční úspora</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2">2 min</div>
+                    <div class="text-lg opacity-90">Čas na optimalizaci</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-white rounded-2xl shadow-xl p-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">Připraveni začít šetřit?</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Plná funkční verze aplikace je připravena pro vaše demo
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:info@trasomat.cz" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition">
+                    📧 Kontaktovat nás
+                </a>
+                <a href="tel:+420123456789" class="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-700 transition">
+                    📱 Zavolat
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-lg font-semibold mb-2">© 2025 TrasoMat AI</p>
+            <p class="text-gray-400">Optimalizujeme vaše kilometry s umělou inteligencí</p>
+            <p class="text-gray-500 text-sm mt-4">Vytvořeno pro malé e-shopy a rozvozové služby v ČR 🇨🇿</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToDemo() {
+            document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
